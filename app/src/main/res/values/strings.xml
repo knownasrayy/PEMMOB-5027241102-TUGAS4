@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nama Aplikasi -->
+    <string name="app_name">Data Mahasiswa</string>
+
+    <!-- Judul Activity -->
+    <string name="title_mhs_form">Form Mahasiswa</string>
+    <string name="title_mhs_detail">Detail Mahasiswa</string>
+    <string name="title_add_mhs">Tambah Mahasiswa</string>
+    <string name="title_edit_mhs">Edit Mahasiswa</string>
+
+    <!-- Form Labels & Hints -->
+    <string name="label_nama">Nama Lengkap</string>
+    <string name="hint_nama">Masukkan nama lengkap mahasiswa</string>
+    <string name="label_nim">NIM</string>
+    <string name="hint_nim">Contoh: 220010001</string>
+    <string name="label_jurusan">Program Studi / Jurusan</string>
+    <string name="hint_jurusan">Contoh: Teknik Informatika</string>
+    <string name="label_angkatan">Tahun Angkatan</string>
+    <string name="hint_angkatan">Contoh: 2023</string>
+
+    <!-- Tombol -->
+    <string name="btn_save">Simpan Data</string>
+    <string name="btn_edit">Edit Data</string>
+    <string name="btn_delete">Hapus Data</string>
+
+    <!-- Dialog Konfirmasi Hapus -->
+    <string name="dialog_delete_title">Hapus Data Mahasiswa</string>
+    <string name="dialog_delete_message">Apakah Anda yakin ingin menghapus data mahasiswa ini? Tindakan ini tidak dapat dibatalkan.</string>
+    <string name="dialog_yes">Ya, Hapus</string>
+    <string name="dialog_no">Batal</string>
+
+    <!-- Placeholder Kosong -->
+    <string name="text_empty">Belum Ada Data Mahasiswa</string>
+    <string name="text_empty_hint">Ketuk tombol di bawah untuk mendaftarkan mahasiswa baru.</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_save_success">Data mahasiswa berhasil disimpan</string>
+    <string name="toast_save_failed">Gagal menyimpan (NIM mungkin sudah terdaftar)</string>
+    <string name="toast_update_success">Data mahasiswa berhasil diperbarui</string>
+    <string name="toast_update_failed">Gagal memperbarui data mahasiswa</string>
+    <string name="toast_delete_success">Data mahasiswa berhasil dihapus</string>
+    <string name="toast_delete_failed">Gagal menghapus data</string>
+
+    <!-- Error Validasi -->
+    <string name="error_nama_empty">Nama lengkap wajib diisi</string>
+    <string name="error_nim_empty">NIM wajib diisi</string>
+    <string name="error_jurusan_empty">Jurusan wajib diisi</string>
+    <string name="error_angkatan_empty">Angkatan wajib diisi</string>
+    <string name="error_angkatan_invalid">Angkatan harus berupa angka 4 digit</string>
+
+    <!-- Content Description -->
+    <string name="desc_empty">Ilustrasi data mahasiswa kosong</string>
+    <string name="desc_fab_add">Tambah Mahasiswa</string>
+
+    <!-- Menu -->
+    <string name="menu_search">Cari</string>
+    <string name="menu_sort">Urutkan</string>
+    <string name="menu_sort_newest">Terbaru</string>
+    <string name="menu_sort_oldest">Terlama</string>
+    <string name="menu_sort_name_asc">Nama (A - Z)</string>
+    <string name="menu_sort_nim_asc">NIM (Terkecil)</string>
+</resources>

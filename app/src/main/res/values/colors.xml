@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palet Material Design 3: Deep Slate Indigo & Harmonious Accents -->
+    <color name="primary">#254E70</color>
+    <color name="primary_dark">#17334A</color>
+    <color name="primary_light">#4F769C</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#D2E4F8</color>
+    <color name="on_primary_container">#0A2540</color>
+
+    <color name="secondary">#526070</color>
+    <color name="secondary_container">#DCE5F0</color>
+    <color name="on_secondary_container">#0F1D2A</color>
+
+    <!-- Surfaces & Backgrounds -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_container">#F3F6FA</color>
+    <color name="surface_container_low">#F8FAFC</color>
+    <color name="surface_container_high">#E9EFF6</color>
+    <color name="background">#F8FAFC</color>
+
+    <!-- Outlines & Dividers -->
+    <color name="outline">#79808A</color>
+    <color name="outline_variant">#E2E8F0</color>
+    <color name="divider">#EAEFF5</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#141E28</color>
+    <color name="text_secondary">#5A6472</color>
+    <color name="text_tertiary">#8A94A4</color>
+
+    <!-- Date Badge / Chip -->
+    <color name="badge_bg">#E9F1FA</color>
+    <color name="badge_text">#1F507E</color>
+
+    <!-- Semantic Alerts & Delete -->
+    <color name="error">#C53030</color>
+    <color name="error_container">#FED7D7</color>
+    <color name="on_error">#FFFFFF</color>
+
+    <!-- Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
