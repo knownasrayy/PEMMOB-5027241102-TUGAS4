@@ -1,41 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Palet Material Design 3: Deep Slate Indigo & Harmonious Accents -->
-    <color name="primary">#254E70</color>
-    <color name="primary_dark">#17334A</color>
-    <color name="primary_light">#4F769C</color>
-    <color name="on_primary">#FFFFFF</color>
-    <color name="primary_container">#D2E4F8</color>
-    <color name="on_primary_container">#0A2540</color>
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ITS OFFICIAL BRAND GUIDELINES PALETTE                                 -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- Warna Primer ITS -->
+    <color name="its_biru_cover">#243E80</color>
+    <color name="its_biru_tua_lambang">#007BC0</color>
+    <color name="its_biru_muda_lambang">#75BEDE</color>
+    <color name="its_kuning_lambang">#FFF200</color>
 
-    <color name="secondary">#526070</color>
-    <color name="secondary_container">#DCE5F0</color>
-    <color name="on_secondary_container">#0F1D2A</color>
+    <!-- Warna Sekunder ITS (Web, UI/UX, & Sosmed) -->
+    <color name="its_sekunder_biru">#013880</color>
+    <color name="its_sekunder_kuning">#FFBD07</color>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- MATERIAL DESIGN 3 SEMANTIC TOKENS                                    -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- Primary (ITS Sekunder Biru - Wajib UI/UX Digital) -->
+    <color name="primary">#013880</color>
+    <color name="primary_dark">#002454</color>
+    <color name="primary_light">#243E80</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#E1ECFA</color>
+    <color name="on_primary_container">#001C42</color>
+
+    <!-- Secondary (ITS Biru Tua Lambang) -->
+    <color name="secondary">#007BC0</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#DEF2FC</color>
+    <color name="on_secondary_container">#003857</color>
+
+    <!-- Tertiary / Accent (ITS Kuning Tua Web/Sosmed) -->
+    <color name="tertiary">#FFBD07</color>
+    <color name="on_tertiary">#352600</color>
+    <color name="tertiary_container">#FFF0C2</color>
+    <color name="on_tertiary_container">#523B00</color>
 
     <!-- Surfaces & Backgrounds -->
     <color name="surface">#FFFFFF</color>
-    <color name="surface_container">#F3F6FA</color>
-    <color name="surface_container_low">#F8FAFC</color>
-    <color name="surface_container_high">#E9EFF6</color>
-    <color name="background">#F8FAFC</color>
+    <color name="surface_container_low">#F7F9FC</color>
+    <color name="surface_container">#EFF3F9</color>
+    <color name="surface_container_high">#E4ECF6</color>
+    <color name="background">#F7F9FC</color>
 
     <!-- Outlines & Dividers -->
-    <color name="outline">#79808A</color>
-    <color name="outline_variant">#E2E8F0</color>
-    <color name="divider">#EAEFF5</color>
+    <color name="outline">#8793A3</color>
+    <color name="outline_variant">#D9E2EE</color>
+    <color name="divider">#E8EFF7</color>
 
     <!-- Typography -->
-    <color name="text_primary">#141E28</color>
-    <color name="text_secondary">#5A6472</color>
-    <color name="text_tertiary">#8A94A4</color>
+    <color name="text_primary">#0E1B2C</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_tertiary">#7B899B</color>
 
-    <!-- Date Badge / Chip -->
-    <color name="badge_bg">#E9F1FA</color>
-    <color name="badge_text">#1F507E</color>
+    <!-- Badges & Chips -->
+    <color name="badge_jurusan_bg">#E0F2FA</color>
+    <color name="badge_jurusan_text">#005B8F</color>
+    <color name="badge_angkatan_bg">#FFF4D4</color>
+    <color name="badge_angkatan_text">#785300</color>
+    <color name="badge_nim_bg">#EDF3FB</color>
+    <color name="badge_nim_text">#013880</color>
+    <color name="badge_status_bg">#E6F4EA</color>
+    <color name="badge_status_text">#137333</color>
+
+    <!-- Backward-compatible aliases for legacy drawables -->
+    <color name="badge_bg">#E0F2FA</color>
+    <color name="badge_text">#005B8F</color>
 
     <!-- Semantic Alerts & Delete -->
-    <color name="error">#C53030</color>
-    <color name="error_container">#FED7D7</color>
+    <color name="error">#BA1A1A</color>
+    <color name="error_container">#FFDAD6</color>
     <color name="on_error">#FFFFFF</color>
 
     <!-- Common -->

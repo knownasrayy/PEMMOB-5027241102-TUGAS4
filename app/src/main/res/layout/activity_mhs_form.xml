@@ -15,7 +15,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/surface"
         app:navigationIcon="?attr/homeAsUpIndicator"
-        app:titleTextColor="@color/text_primary"
+        app:navigationIconTint="@color/primary"
+        app:titleTextColor="@color/primary"
         app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
     <View
@@ -36,6 +37,27 @@
             android:orientation="vertical"
             android:padding="20dp">
 
+            <!-- Form Header Badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_jurusan"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:text="FORMULIR AKADEMIK ITS"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/badge_jurusan_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:text="Masukkan informasi data mahasiswa dengan lengkap dan benar."
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary" />
+
             <!-- Field 1: Nama Lengkap -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_nama"
@@ -46,6 +68,7 @@
                 app:startIconDrawable="@drawable/ic_person"
                 app:startIconTint="@color/primary"
                 app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/primary"
                 app:boxCornerRadiusTopStart="14dp"
                 app:boxCornerRadiusTopEnd="14dp"
                 app:boxCornerRadiusBottomStart="14dp"
@@ -61,7 +84,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Field 2: NIM (Nomor Induk Mahasiswa) -->
+            <!-- Field 2: NRP / NIM -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_nim"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -72,7 +95,8 @@
                 app:startIconDrawable="@drawable/ic_badge"
                 app:startIconTint="@color/primary"
                 app:endIconMode="clear_text"
-                app:helperText="Nomor Induk Mahasiswa harus unik"
+                app:helperText="NRP/NIM harus unik dan belum pernah terdaftar"
+                app:boxStrokeColor="@color/primary"
                 app:boxCornerRadiusTopStart="14dp"
                 app:boxCornerRadiusTopEnd="14dp"
                 app:boxCornerRadiusBottomStart="14dp"
@@ -88,7 +112,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Field 3: Jurusan / Program Studi -->
+            <!-- Field 3: Departemen / Jurusan -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_jurusan"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -99,6 +123,7 @@
                 app:startIconDrawable="@drawable/ic_school"
                 app:startIconTint="@color/primary"
                 app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/primary"
                 app:boxCornerRadiusTopStart="14dp"
                 app:boxCornerRadiusTopEnd="14dp"
                 app:boxCornerRadiusBottomStart="14dp"
@@ -125,7 +150,8 @@
                 app:startIconDrawable="@drawable/ic_calendar"
                 app:startIconTint="@color/primary"
                 app:endIconMode="clear_text"
-                app:helperText="Contoh: 2022, 2023, 2024"
+                app:helperText="Contoh: 2024"
+                app:boxStrokeColor="@color/primary"
                 app:boxCornerRadiusTopStart="14dp"
                 app:boxCornerRadiusTopEnd="14dp"
                 app:boxCornerRadiusBottomStart="14dp"

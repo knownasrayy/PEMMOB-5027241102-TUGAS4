@@ -33,10 +33,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="M"
+                android:text="R"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/on_primary_container" />
+                android:textColor="@color/primary" />
 
         </FrameLayout>
 
@@ -53,13 +53,13 @@
                 android:id="@+id/tv_mhs_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"
                 android:maxLines="1"
                 android:ellipsize="end" />
 
-            <!-- NIM with badge icon -->
+            <!-- NRP / NIM Row with Icon -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,20 +71,21 @@
                     android:layout_width="14dp"
                     android:layout_height="14dp"
                     android:src="@drawable/ic_badge"
-                    app:tint="@color/text_secondary"
+                    app:tint="@color/secondary"
                     android:contentDescription="@null" />
 
                 <TextView
                     android:id="@+id/tv_mhs_nim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="13sp"
-                    android:textColor="@color/text_secondary" />
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="monospace" />
 
             </LinearLayout>
 
-            <!-- Tags Row: Jurusan & Angkatan -->
+            <!-- Tags Row: Jurusan (Biru Muda ITS) & Angkatan (Kuning ITS) -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -102,7 +103,7 @@
                     android:paddingVertical="3dp"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/badge_text"
+                    android:textColor="@color/badge_jurusan_text"
                     android:maxLines="1"
                     android:ellipsize="end" />
 
@@ -112,12 +113,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:background="@drawable/bg_badge_date"
+                    android:background="@drawable/bg_chip_angkatan"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="3dp"
                     android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/badge_text" />
+                    android:textColor="@color/badge_angkatan_text" />
 
             </LinearLayout>
 
@@ -128,6 +129,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/ic_chevron_right"
+            app:tint="@color/text_tertiary"
             android:contentDescription="@null" />
 
     </LinearLayout>

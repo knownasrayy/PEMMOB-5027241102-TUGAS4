@@ -15,8 +15,9 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/surface"
         app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/primary"
         app:title="@string/title_mhs_detail"
-        app:titleTextColor="@color/text_primary"
+        app:titleTextColor="@color/primary"
         app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
     <View
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Card Profil Mahasiswa -->
+            <!-- Card Profil Mahasiswa ITS -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,7 +53,7 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- Header: Big Avatar & Name -->
+                    <!-- Header: Big Avatar, Name & Status -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -60,8 +61,8 @@
                         android:gravity="center_vertical">
 
                         <FrameLayout
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
                             android:background="@drawable/bg_avatar_circle">
 
                             <TextView
@@ -69,10 +70,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="M"
-                                android:textSize="26sp"
+                                android:text="R"
+                                android:textSize="28sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/on_primary_container" />
+                                android:textColor="@color/primary" />
 
                         </FrameLayout>
 
@@ -83,11 +84,24 @@
                             android:layout_marginStart="16dp"
                             android:orientation="vertical">
 
+                            <!-- Status Badge -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_chip_status"
+                                android:paddingHorizontal="8dp"
+                                android:paddingVertical="2dp"
+                                android:text="Mahasiswa Aktif ITS"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/badge_status_text" />
+
                             <TextView
                                 android:id="@+id/tv_nama"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="20sp"
+                                android:layout_marginTop="4dp"
+                                android:textSize="18sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/text_primary" />
 
@@ -96,7 +110,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textSize="14sp"
+                                android:textSize="13sp"
                                 android:textColor="@color/text_secondary" />
 
                         </LinearLayout>
@@ -109,7 +123,7 @@
                         android:layout_marginVertical="18dp"
                         android:background="@color/outline_variant" />
 
-                    <!-- Item 1: NIM -->
+                    <!-- Item 1: NRP / NIM -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -120,19 +134,19 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:src="@drawable/ic_badge"
-                            app:tint="@color/primary"
+                            app:tint="@color/secondary"
                             android:contentDescription="@null" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="14dp"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Nomor Induk Mahasiswa (NIM)"
+                                android:text="Nomor Registrasi Pokok (NRP / NIM)"
                                 android:textSize="12sp"
                                 android:textColor="@color/text_tertiary" />
 
@@ -143,14 +157,15 @@
                                 android:layout_marginTop="2dp"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/text_primary"
+                                android:textColor="@color/primary"
+                                android:fontFamily="monospace"
                                 android:textIsSelectable="true" />
 
                         </LinearLayout>
 
                     </LinearLayout>
 
-                    <!-- Item 2: Jurusan / Program Studi -->
+                    <!-- Item 2: Departemen / Jurusan -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -162,19 +177,19 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:src="@drawable/ic_school"
-                            app:tint="@color/primary"
+                            app:tint="@color/secondary"
                             android:contentDescription="@null" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="14dp"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Program Studi / Jurusan"
+                                android:text="Departemen / Program Studi"
                                 android:textSize="12sp"
                                 android:textColor="@color/text_tertiary" />
 
@@ -183,7 +198,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textColor="@color/text_primary" />
 
                         </LinearLayout>
@@ -202,13 +217,13 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:src="@drawable/ic_calendar"
-                            app:tint="@color/primary"
+                            app:tint="@color/secondary"
                             android:contentDescription="@null" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="14dp"
                             android:orientation="vertical">
 
                             <TextView
@@ -223,7 +238,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textColor="@color/text_primary" />
 
                         </LinearLayout>
@@ -248,13 +263,13 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="14dp"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Waktu Terdaftar"
+                                android:text="Waktu Pencatatan Sistem"
                                 android:textSize="12sp"
                                 android:textColor="@color/text_tertiary" />
 
@@ -263,7 +278,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:textSize="14sp"
+                                android:textSize="13sp"
                                 android:textColor="@color/text_secondary" />
 
                         </LinearLayout>
@@ -296,7 +311,10 @@
             android:layout_marginEnd="8dp"
             android:text="@string/btn_edit"
             app:icon="@drawable/ic_edit"
-            app:cornerRadius="14dp" />
+            app:cornerRadius="14dp"
+            app:backgroundTint="@color/primary_container"
+            android:textColor="@color/primary"
+            app:iconTint="@color/primary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_delete"

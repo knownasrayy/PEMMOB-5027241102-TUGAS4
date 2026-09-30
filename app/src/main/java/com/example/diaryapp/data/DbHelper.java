@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * DbHelper â€” SQLiteOpenHelper untuk database mahasiswa.
+ * DbHelper â€” SQLiteOpenHelper untuk database mahasiswa ITS.
  * Database: mahasiswa.db
  * Tabel: mahasiswa
  */
@@ -39,6 +39,12 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_TABLE);
+
+        // Seed data dummy resmi: Rayhan Agnan Kusuma & Tiffany Viriya Chu
+        db.execSQL("INSERT INTO " + TABLE_MAHASISWA + " (" +
+                COL_NAMA + ", " + COL_NIM + ", " + COL_JURUSAN + ", " + COL_ANGKATAN + ") VALUES " +
+                "('Rayhan Agnan Kusuma', '5027241102', 'Teknologi Informasi', 2024), " +
+                "('Tiffany Viriya Chu', '5027241088', 'Teknologi Informasi', 2024)");
     }
 
     @Override

@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.diaryapp.R;
 import com.example.diaryapp.data.Mahasiswa;
 import com.example.diaryapp.data.MahasiswaRepository;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import java.util.List;
 
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView rvMahasiswa;
     private LinearLayout layoutEmpty;
+    private MaterialCardView cardHero;
+    private TextView tvHeroCounter;
     private ExtendedFloatingActionButton fabAdd;
 
     private MahasiswaAdapter adapter;
@@ -43,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
-        rvMahasiswa = findViewById(R.id.rv_mahasiswa);
-        layoutEmpty = findViewById(R.id.layout_empty);
-        fabAdd      = findViewById(R.id.fab_add);
+        rvMahasiswa   = findViewById(R.id.rv_mahasiswa);
+        layoutEmpty   = findViewById(R.id.layout_empty);
+        cardHero      = findViewById(R.id.card_hero);
+        tvHeroCounter = findViewById(R.id.tv_hero_counter);
+        fabAdd        = findViewById(R.id.fab_add);
 
         View btnEmptyAdd = findViewById(R.id.btn_empty_add);
         if (btnEmptyAdd != null) {
@@ -66,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
         });
         rvMahasiswa.setAdapter(adapter);
 
-        // Scroll listener: Shrink FAB on scroll down, expand on scroll up
         rvMahasiswa.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(@NonNull RecyclerView rv, int dx, int dy) {
@@ -113,15 +118,21 @@ public class MainActivity extends AppCompatActivity {
 
         if (list == null || list.isEmpty()) {
             rvMahasiswa.setVisibility(View.GONE);
+            if (cardHero != null) cardHero.setVisibility(View.GONE);
             layoutEmpty.setVisibility(View.VISIBLE);
             if (getSupportActionBar() != null) {
                 getSupportActionBar().setSubtitle("0 Mahasiswa");
             }
         } else {
             rvMahasiswa.setVisibility(View.VISIBLE);
+            if (cardHero != null) cardHero.setVisibility(View.VISIBLE);
             layoutEmpty.setVisibility(View.GONE);
+            String countText = list.size() + " Mahasiswa Terdaftar";
+            if (tvHeroCounter != null) {
+                tvHeroCounter.setText(countText);
+            }
             if (getSupportActionBar() != null) {
-                getSupportActionBar().setSubtitle(list.size() + " Mahasiswa Terdaftar");
+                getSupportActionBar().setSubtitle(getString(R.string.institution_name));
             }
         }
     }
@@ -134,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         if (searchItem != null) {
             SearchView sv = (SearchView) searchItem.getActionView();
             if (sv != null) {
-                sv.setQueryHint("Cari nama, NIM, jurusan...");
+                sv.setQueryHint("Cari nama, NRP, jurusan...");
                 sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                     @Override
                     public boolean onQueryTextSubmit(String q) {
